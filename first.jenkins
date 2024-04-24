@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage("First step") {
             steps{
-                sh "wget -qO- ifconfig.me"
+                sh 'echo \'Hello World\''
             }
         }
     }
