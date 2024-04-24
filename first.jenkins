@@ -11,7 +11,7 @@ pipeline {
         timestamps()
     }
     stages {
-        stage('First step') {
+        step('First step') {
             sh 'wget -qO- ifconfig.me'
         }
     }
