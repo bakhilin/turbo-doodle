@@ -1,6 +1,5 @@
-FROM alpine
-RUN apk add --no-cache curl wget busybox-extras netcat-openbsd python3 py-pip
-RUN python3 -m venv .venv
-RUN pip install awscli
-RUN apk --purge -v del py-pip 
-CMD tail -f /dev/null
+FROM ubuntu 
+RUN apt-get install python3
+RUN touch main.py
+RUN echo "print('hello world>lddkd')" >> main.py
+CMD python3 main.py
