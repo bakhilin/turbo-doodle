@@ -11,15 +11,8 @@ pipeline {
         timestamps()
     }
     stages {
-        stage("First step") {
-            steps {
-                sh 'ssh root@ub1 \'hostname\''
-            }
-        }
-        stage("Second step") {
-            steps {
-                sh 'ssh root@ub1 \'uptime\''
-            }
+        stage('First step') {
+            sh 'wget -qO- ifconfig.me'
         }
     }
 }
